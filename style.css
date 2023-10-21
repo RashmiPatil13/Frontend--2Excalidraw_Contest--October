@@ -1,52 +1,158 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+#root {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    
 }
 body{
     background-color:white;
     margin-top: 20px ;
 }
-.bar{
+header {
+    
+    position: absolute;
+    width: 100vw; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    padding: 5px;
+    
+    
+    
+}   
+.sidebar{
     border-radius: 10px;
     border: 1px solid gray;
     width: 40px;
     height: 40px;
     padding: 5px;
-    padding-left:10px ;
+    padding-left: 10px;
     background-color: white;
+   
     
 }
-.bar:hover{
+.sidebar:hover{
     background-color: rgb(185, 183, 183);
+    box-shadow: 0px 0px 5px rgb(82, 81, 81);
 }
-.icons{
-   display: flex;
+.sqaure {
+    rotate: 45deg;
+}
+#menu{
+    height: 45px;
+    width: 580px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-inline: 5px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgb(135, 135, 135);
+    box-shadow: 0px 0px 5px gray;
+   
+}
+.vertical-line {
+    height: 30px;
+    border-right: 2px solid #d6d6d6;
+}
+button {
+    border: none ;
+    padding: 4px 6px; 
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px !important;
+}
+
+button:hover{
+    background-color: #b4b4bf;
+    border-radius: 7px;
+}
+.icon{
+   /* display: flex;
    justify-content: center;
    align-items: center;
    margin-left: 500px;
     border-radius: 10px;
     border: 1px solid gray;
     padding: 5px;
-    background-color:white;
+    background-color:white; */
+    
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+
    
 }
-.icons>i:hover{
-    background-color: rgb(185, 185, 255);
+.icon>i:hover{
+    background-color: rgb(183, 183, 255);
     width: 40px;
     height: 40px;
     border-radius: 10px;
+    cursor: pointer;
+}
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+    color: #b6b4b4;
+}
+.active {
+    background-color: #41784d;
+    border-radius: 4px;
+    color: white;
+}
+
+.rightmenu{
+   margin-right: 50px;
+
+}
+ footer{
+    bottom: 20px;
+    position: absolute;
+    z-index: 100;
    
     
+} 
+footer>option {
+    background-color: #d1d1f2;
+    padding: 4px 10px;
+    border-radius: 5px;
 }
-.lib{
-    padding-left: 370px;
-}
+
 #hero{
     padding-left: 480px;
 }
-#h2>p:hover{
-    background-color: rgb(173, 244, 177);
+
+#hero2>p:hover{
+    background-color: rgb(215, 230, 215);
     border-radius: 10px;
     width: 550px;
     height: 40px;
+    box-shadow: 0px 0px 5px rgb(119, 125, 120);
 }
+#f1:hover{
+    background-color: #d6d6d6;
+    box-shadow: 0px 0px 5px rgb(82, 81, 81);
+}
+
+#canvas {
+    cursor: crosshair;
+    
+}
+
+
