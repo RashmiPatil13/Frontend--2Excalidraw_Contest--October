@@ -11,22 +11,16 @@
     position: relative;
     
 }
-body{
-    background-color:white;
-    margin-top: 20px ;
-}
+
 header {
-    
     position: absolute;
     width: 100vw; 
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 10;
-    padding: 5px;
-    
-    
-    
+    padding: 5px;  
+    margin-top: 10px; 
 }   
 .sidebar{
     border-radius: 10px;
@@ -35,14 +29,12 @@ header {
     height: 40px;
     padding: 5px;
     padding-left: 10px;
-    background-color: white;
-   
-    
+    background-color: rgb(213, 216, 216);  
 }
 .sidebar:hover{
-    background-color: rgb(185, 183, 183);
-    box-shadow: 0px 0px 5px rgb(82, 81, 81);
+    border: 1px solid blue;
 }
+
 .sqaure {
     rotate: 45deg;
 }
@@ -75,6 +67,8 @@ button {
 button:hover{
     background-color: #b4b4bf;
     border-radius: 7px;
+    width: 50px;
+    height: 30px;
 }
 .icon{
    /* display: flex;
@@ -96,8 +90,6 @@ button:hover{
     border-radius: 8px;
     cursor: pointer;
     position: relative;
-
-   
 }
 .icon>i:hover{
     background-color: rgb(183, 183, 255);
@@ -116,43 +108,25 @@ sub {
     border-radius: 4px;
     color: white;
 }
-
 .rightmenu{
    margin-right: 50px;
-
 }
  footer{
-    bottom: 20px;
+    bottom: 10px;
     position: absolute;
     z-index: 100;
-   
-    
-} 
+ }    
 footer>option {
     background-color: #d1d1f2;
     padding: 4px 10px;
     border-radius: 5px;
 }
-
-#hero{
-    padding-left: 480px;
-}
-
-#hero2>p:hover{
-    background-color: rgb(215, 230, 215);
-    border-radius: 10px;
-    width: 550px;
-    height: 40px;
-    box-shadow: 0px 0px 5px rgb(119, 125, 120);
-}
 #f1:hover{
     background-color: #d6d6d6;
     box-shadow: 0px 0px 5px rgb(82, 81, 81);
 }
-
 #canvas {
     cursor: crosshair;
-    
-}
+ }
 
 

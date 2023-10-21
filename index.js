@@ -11,7 +11,7 @@ let previousPosition = null ;
 
 function onMouseDown(e) {
     previousPosition = [ e.clientX , e.clientY];
-    //c.strokeStyle = drawingColor;
+    
     c.lineWidth = 2; 
     canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mouseup", onMouseUp); 
