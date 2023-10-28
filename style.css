@@ -172,13 +172,14 @@ footer>option {
     top:20px;
     left:50px;
  }
-@media screen and (max-width:480px) {
+@media screen and (max-width:360px) {
     #menu{
         overflow-x: scroll;
     }
     #right{
         display: none !important;
     }
+   
     footer{
         margin-top: 30px;
     }
