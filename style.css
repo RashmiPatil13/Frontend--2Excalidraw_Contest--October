@@ -176,5 +176,11 @@ footer>option {
     #menu{
         overflow-x: scroll;
     }
+    #right{
+        display: none !important;
+    }
+    footer{
+        margin-top: 30px;
+    }
 }
 
