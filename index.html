@@ -13,65 +13,75 @@
 </head>
 <body>
     <div id="root">
+      <div class="nav">
+         <div class="left"></div>
+         <div class="center"></div>
+         <div class="right"></div>
+
+      </div>
      <header >
-        <div class="ms-2  sidebar">
+        <div class="ms-2  sidebar" onclick="toggleMenu()">
             <i class="fa-solid fa-bars"></i>
         </div>
-        <div id="menu">
-            <div class="icon">
+        <div id="menu" >
+            <div class="icon" id="actionbuttons">
                   
-                     <button class="fa-solid fa-unlock-keyhole"></button>
+                     <button class="fa-solid fa-unlock-keyhole "></button>
             </div>         
             <span class="vertical-line"></span>
-            <div class="icon">
+            <div class="icon" id="actionbuttons" onclick="toggleMenu()">
                     <button class="    fa-regular fa-hand"> </button>
              </div>
-             <div class="icon">
+             <div class="icon" id="actionbuttons" onclick="toggleMenu()">
                   <button class="   fa-solid fa-arrow-pointer" style="color: #58585c"></button>
                   <sub>1</sub>
            </div> 
-            <div class="icon">
-                <button class="  fa-regular fa-square"></button>
+            <div class="icon" id="actionbuttons" onclick="toggleMenu()">
+                <button class=" fa-regular fa-square" id="rectangle"
+                onclick="onActionClick(this)" ></button>
                 <sub>2</sub>
              </div>
-             <div class="icon">
-                <button class=" fa-regular fa-square sqaure"></button>
+             <div class="icon" id="actionbuttons" onclick="toggleMenu()">
+                <button class=" fa-regular fa-square sqaure" id="rhombus"
+                onclick="onActionClick(this)"></button>
                 <sub>3</sub>
              </div>
-             <div class="icon" >
-                  <button class="  fa-regular fa-circle"></button>
+             <div class="icon" id="actionbuttons" onclick="toggleMenu()">
+                  <button class="  fa-regular fa-circle" id="circle"  
+                  onclick="onActionClick(this)"></button>
                   <sub>4</sub>
              </div>
-               <div class="icon" >
-                  <button class="    fa-solid fa-arrow-right"></button>
+               <div class="icon" id="actionbuttons"onclick="toggleMenu()" >
+                  <button class="fa-solid fa-arrow-right" id="arrow"
+                  onclick="onActionClick(this)"></button>
                   <sub>5</sub>
                </div>
-               <div class="icon">
-                  <button class="  fa-solid fa-minus"></button>
+               <div class="icon" id="actionbuttons" onclick="toggleMenu()">
+                  <button class="  fa-solid fa-minus"  id="line"
+                  onclick="onActionClick(this)"></button>
                   <sub>6</sub>
                </div>
-               <div class="icon">
-                  <button class="   fa-solid fa-pencil"  id="pencil"></button>
+               <div class="icon" id="actionbuttons" onclick="toggleMenu()">
+                  <button class="fa-solid fa-pencil"  id="freehand"
+                  onclick="onActionClick(this)"></button>
                   <sub>7</sub>
                </div>
-               <div class="icon">
+               <div class="icon" id="actionbuttons" onclick="toggleMenu()">
                   <button class=" fa-solid fa-a"></button>
                   <sub>8</sub>
                </div>
-               <div class="icon">
-                  <button class="  fa-regular fa-image"></button>
-                  <sub>9</sub>
-               </div>
-               <div class="icon">
-                  <button class="  fa-solid fa-eraser"></button>
+               
+               <div class="icon" id="actionbuttons" onclick="toggleMenu()">
+                  <button class="  fa-solid fa-eraser" id="eraser"
+                  onclick="onActionClick(this)" >  </button>
                   <sub>0</sub>
                </div> 
                <span class="vertical-line"></span>
               <div class="icon" >
                 <button class="  fa-solid fa-shapes"></button>
                 </div> 
-                <input type="color" id="color-picker">
-         </div>  
+                
+            </div>  
         <div class="d-flex  rightmenu">
             <i class="fa-solid fa-user-group" style="color: #eaeaeb; background-color: rgb(66, 66, 125); border-radius: 10px; width: 35px; height: 35px; padding: 5px; padding-top:10px; "></i>&nbsp;&nbsp;&nbsp;
             <p  style="border:1px solid gray; background-color: #ffffff; border-radius: 10px; width: 100px; height: 35px; padding: 5px; padding-left: 5px;"  id="f1"> <i class="fa-solid fa-book-open" style="color: #5a6475;"></i> Library</p> 
@@ -91,11 +101,35 @@
 
     <footer class="d-flex">
       <div class=" d-flex option">
-       <p style="width: 170px; height: 40px; padding-left: 15px; margin-left: 30px; border: 2px solid rgb(98, 128, 125); border-radius: 10px; padding-top: 5px; background-color: rgb(133, 157, 151); " > - &nbsp;&nbsp; <span class="vertical-line"></span> &nbsp;&nbsp;190% &nbsp;&nbsp; <span class="vertical-line"></span>&nbsp;&nbsp; +</p> &nbsp;&nbsp;&nbsp;&nbsp;
-       <p style="width: 120px; height: 40px; border: 2px solid rgb(98, 128, 125); border-radius: 20px; padding-left: 17px;  padding-top: 7px; background-color: rgb(133, 157, 151);"> <button class="fa-solid fa-rotate-left"></button>&nbsp; <span class="vertical-line"></span> &nbsp; <button class="fa-sharp fa-solid fa-rotate-right"></button></p>
+       <p style="width: 170px; height: 40px; padding-left: 15px; margin-left: 30px; border-radius: 10px; padding-top: 5px; background-color: rgb(221, 231, 255);; " > - &nbsp;&nbsp; <span class="vertical-line"></span> &nbsp;&nbsp;190% &nbsp;&nbsp; <span class="vertical-line"></span>&nbsp;&nbsp; +</p> &nbsp;&nbsp;&nbsp;&nbsp;
+       <!-- <p style="width: 120px; height: 40px; border: 2px solid rgb(98, 128, 125); border-radius: 20px; padding-left: 17px;  padding-top: 7px; background-color: rgb(133, 157, 151);"> <button id="undo" class="fa-solid fa-rotate-left"></button>&nbsp; <span class="vertical-line"></span> &nbsp; <button  id="redo" class="fa-sharp fa-solid fa-rotate-right"></button></p> -->
+       <div class="undo">
+         <button  id="undo"><i class="fa-sharp fa-solid fa-arrow-rotate-left" id="undo"></i></button>
+         <button id="redo"><i class="fa-solid fa-arrow-rotate-right" id="redo"></i></button>
+       </div>
        <p style="margin-left: 1100px; border-radius: 10px; border: 1px solid rgb(57, 53, 53); width: 35px; height: 35px; padding: 5px; " id="f1"><i class="fa-solid fa-circle-question"></i></p>
        </div>
       </footer>
+      <div class="form hide">
+         <label for="strokewidth">Stroke Width</label>
+         <input
+           type="range"
+           id="strokewidth"
+           name="strokewidth"
+           min="3"
+           max="10"
+           oninput="onInput(this)"
+         />
+         <label for="strokestyle">Stroke Color</label>
+         <input
+           type="color"
+           name="strokestyle"
+           id="strokestyle"
+           oninput="onInput(this)"
+         /> 
+         <button style="width: 130px; height: 30px; border: 1px solid black; padding: 5px;" class="clear-canvas">Clear Canvas</button>
+         <button style="width: 130px; height: 30px; border: 1px solid black; padding: 5px; background-color: blue; color: #ffffff;" class="save-img" id="save">Save As Image</button>
+       </div>
    </div>
 
 
@@ -114,7 +148,10 @@
    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<script src="index.js"></script>
-<script src="freehand.js"></script>
+<!-- <script src="index.js"></script> -->
+<!-- <script src="freehand.js"></script> -->
+ <script src="drawing.js"></script> 
+ <script src="state.js"></script>
+ <script src="undoredo.js"></script>
 </body>
 </html>

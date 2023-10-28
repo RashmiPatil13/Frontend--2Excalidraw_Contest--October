@@ -4,11 +4,14 @@ let isPencilActive = false ;
 const colorPicker = document.getElementById("color-picker");
 
 
+
 colorPicker.addEventListener("change", () => {
     drawingColor = colorPicker.value ;
     c.strokeStyle = drawingColor;
     console.log(drawingColor);
 });
+
+
 
 pencil.addEventListener("click", onPencilClick) ;
 
